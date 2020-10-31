@@ -6,7 +6,7 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:31:41 by youncho           #+#    #+#             */
-/*   Updated: 2020/10/31 18:28:54 by youncho          ###   ########.fr       */
+/*   Updated: 2020/10/31 20:40:43 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,26 @@ size_t	count_words(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
-	size_t	words;
+	char	*tmp;
 	size_t	idx;
 
-	words = count_words(s, c);
-	if (!(ret = (char **)malloc(sizeof(char *) * words + 1)))
+	idx = 0;
+	if (!(ret = (char **)malloc(sizeof(char *) * count_words(s, c) + 1)))
 		return (0);
-	while (words--)
+	while (*s)
 	{
-		idx = 0;
-		while (*s == c)
+		if (*s == c)
+		{
 			s++;
-		while (s[idx] != c)
-			idx++;
-		if (!(*ret = (char *)malloc(idx + 1)))
+			continue;
+		}
+		tmp = (char *)s;
+		while (*s && *s != c)
+			s++;
+		if (!(ret[idx] = (char *)malloc(s - tmp + 1)))
 			return (0);
-		ft_strlcpy(*ret, s, idx);
-		(*ret)[idx] = 0;
-		ret++;
-		s += idx + 1;
+		ft_strlcpy(ret[idx++], tmp, s - tmp + 1);
 	}
-	ret = (char **)0;
+	ret[idx] = 0;
 	return (ret);
 }
