@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 16:41:29 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/03 10:25:21 by youncho          ###   ########.fr       */
+/*   Created: 2020/11/03 10:14:07 by youncho           #+#    #+#             */
+/*   Updated: 2020/11/03 10:26:57 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	cnt;
+	char	*ret;
+	size_t	len;
 
-	cnt = 0;
-	while (*(dest + cnt) && cnt < size)
-		cnt++;
-	while (*src && cnt + 1 < size)
-	{
-		*(dest + cnt) = *src;
-		src++;
-		cnt++;
-	}
-	if (cnt < size)
-		*(dest + cnt) = 0;
-	while (*src)
-	{
-		src++;
-		cnt++;
-	}
-	return (cnt);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(ret = malloc(len)))
+		return (0);
+	ft_strlcpy(ret, s1, len);
+	ft_strlcat(ret, s2, len);
+	return (ret);
 }

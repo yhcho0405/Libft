@@ -1,36 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 16:41:29 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/03 10:25:21 by youncho          ###   ########.fr       */
+/*   Created: 2020/11/03 11:15:31 by youncho           #+#    #+#             */
+/*   Updated: 2020/11/03 12:56:23 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+int		get_len(long long n)
 {
-	unsigned int	cnt;
+	if (n < 10)
+		return (1);
+	return (get_len(n / 10) + 1);
+}
 
-	cnt = 0;
-	while (*(dest + cnt) && cnt < size)
-		cnt++;
-	while (*src && cnt + 1 < size)
+char	*ft_itoa(int n)
+{
+	char			*ret;
+	int				len;
+	long long		tmp;
+
+	len = 0;
+	tmp = n;
+	if (n < 0)
 	{
-		*(dest + cnt) = *src;
-		src++;
-		cnt++;
+		len++;
+		tmp = -tmp;
 	}
-	if (cnt < size)
-		*(dest + cnt) = 0;
-	while (*src)
-	{
-		src++;
-		cnt++;
-	}
-	return (cnt);
+	len += get_len(tmp);
+	if (!(ret = malloc(len + 1)))
+		return (0);
+	ret[len] = 0;
+	ret[--len] = tmp % 10 + '0';
+	while (tmp /= 10)
+		ret[--len] = tmp % 10 + '0';
+	if (n < 0)
+		ret[0] = '-';
+	return (ret);
 }
