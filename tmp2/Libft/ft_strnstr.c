@@ -3,34 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gicho <gicho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/07 20:48:55 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/08 00:41:25 by youncho          ###   ########.fr       */
+/*   Created: 2020/04/08 11:36:07 by gicho             #+#    #+#             */
+/*   Updated: 2020/04/08 11:36:07 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *h, const char *n, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	l;
-	size_t	idx;
+	char	*a;
+	char	*b;
+	size_t	len_neddle;
 
-	idx = 0;
-	if (!*n)
-		return ((char *)h);
-	if (!ft_strlen(h) || len < ft_strlen(n))
+	if (!*needle)
+		return ((char*)haystack);
+	len_neddle = ft_strlen(needle);
+	if (!ft_strlen(haystack) || len < len_neddle)
 		return (0);
-	while (idx < len)
+	len -= --len_neddle;
+	while (len-- && *haystack)
 	{
-		l = 0;
-		while (idx + l < len && ((char *)h)[idx + l] &&
-			((char *)n)[l] && ((char *)h)[idx + l] == ((char *)n)[l])
-			l++;
-		if (!((char *)n)[l])
-			return ((char *)h + idx);
-		idx++;
+		a = (char*)haystack;
+		b = (char*)needle;
+		while (*b && *a == *b)
+		{
+			++a;
+			++b;
+		}
+		if (*b == 0)
+			return ((char*)haystack);
+		++haystack;
 	}
 	return (0);
 }

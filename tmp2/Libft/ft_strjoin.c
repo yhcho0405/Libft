@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gicho <gicho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 17:36:35 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/07 22:30:49 by youncho          ###   ########.fr       */
+/*   Created: 2020/04/08 11:36:07 by gicho             #+#    #+#             */
+/*   Updated: 2020/04/08 11:36:07 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t num)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (num--)
-		*((char *)ptr++) = 0;
+	size_t	len;
+	char	*ret;
+
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(ret = malloc(len)))
+		return (0);
+	ft_strlcpy(ret, s1, len);
+	ft_strlcat(ret, s2, len);
+	return (ret);
 }

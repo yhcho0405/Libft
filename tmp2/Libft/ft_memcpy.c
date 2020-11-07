@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gicho <gicho@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/05 17:36:35 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/07 22:30:49 by youncho          ###   ########.fr       */
+/*   Created: 2020/04/08 11:36:07 by gicho             #+#    #+#             */
+/*   Updated: 2020/04/08 11:36:07 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *ptr, size_t num)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	while (num--)
-		*((char *)ptr++) = 0;
+	void *ret;
+
+	if (!dst && !src)
+		return (0);
+	ret = dst;
+	while (n--)
+		*(char*)dst++ = *(char*)src++;
+	return (ret);
 }
