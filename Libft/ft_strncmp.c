@@ -6,27 +6,21 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:45:08 by youncho           #+#    #+#             */
-/*   Updated: 2020/10/09 21:06:16 by youncho          ###   ########.fr       */
+/*   Updated: 2020/11/13 14:04:01 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	cnt;
+#include "libft.h"
 
-	cnt = 0;
-	while (*s1 && *s2 && cnt < n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t idx;
+
+	idx = -1;
+	while (++idx < n && (s1[idx] || s2[idx]))
 	{
-		if (*s1 != *s2)
-			return ((unsigned char)*s1 - (unsigned char)*s2);
-		cnt++;
-		s1++;
-		s2++;
+		if (s1[idx] != s2[idx])
+			return ((unsigned char)s1[idx] - (unsigned char)s2[idx]);
 	}
-	if (cnt == n)
-	{
-		s1--;
-		s2--;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (0);
 }

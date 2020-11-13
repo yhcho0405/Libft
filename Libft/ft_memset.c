@@ -6,7 +6,7 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:38:03 by youncho           #+#    #+#             */
-/*   Updated: 2020/10/31 12:33:15 by youncho          ###   ########.fr       */
+/*   Updated: 2020/11/13 09:45:15 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	*ft_memset(void *ptr, int val, size_t n)
 {
-	while (--n)
-		((char *)ptr)[n] = val;
-	((char *)ptr)[n] = val;
+	size_t i;
+
+	i = 0;
+	while (i < n)
+		((char *)ptr)[i++] = val;
 	return (ptr);
 }

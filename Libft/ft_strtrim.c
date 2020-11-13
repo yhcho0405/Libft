@@ -6,7 +6,7 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 10:28:01 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/03 11:15:13 by youncho          ###   ########.fr       */
+/*   Updated: 2020/11/13 14:41:49 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*tail;
 	size_t	len;
 
+	if (!s1 || !set)
+		return ((char *)s1);
 	head = (char *)s1;
 	tail = (char *)s1 + ft_strlen(s1);
 	while (*head && find_set(*head, set))

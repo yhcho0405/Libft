@@ -6,7 +6,7 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:31:41 by youncho           #+#    #+#             */
-/*   Updated: 2020/10/31 20:40:43 by youncho          ###   ########.fr       */
+/*   Updated: 2020/11/13 14:43:31 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,10 @@ char	**ft_split(char const *s, char c)
 	char	*tmp;
 	size_t	idx;
 
+	if (!s)
+		return (0);
 	idx = 0;
-	if (!(ret = (char **)malloc(sizeof(char *) * count_words(s, c) + 1)))
+	if (!(ret = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1) + 1)))
 		return (0);
 	while (*s)
 	{
