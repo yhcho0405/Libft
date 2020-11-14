@@ -2,13 +2,26 @@
 
 ### **memory**
 - [`memset`](./Libft/ft_memset.c)
+    - Writes len bytes of value c (converted to an unsigned char) to the string b.
 - [`bzero`](./Libft/ft_bzero.c)
+    - Writes n zeroed bytes to the string s.
+    - If n is zero, bzero() does nothing.
 - [`memcpy`](./Libft/ft_memcpy.c)
+    - Copies n bytes from memory area src to memory area dst.
+    - If dst and src overlap, behavior is undefined.  Applications in which dst and src might overlap should use memmove(3) instead.
 - [`memccpy`](./Libft/ft_memccpy.c)
+    - Copies bytes from string src to string dst.
+    - If the character c (as converted to an unsigned char) occurs in the string src, the copy stops and a pointer to the byte after the copy of c in the string dst is returned.     - Otherwise, n bytes are copied, and a NULL pointer is returned.
 - [`memmove`](./Libft/ft_memmove.c)
+    - Copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
 - [`memchr`](./Libft/ft_memchr.c)
+    - Locates the first occurrence of c (converted to an unsigned char) in string s.
 - [`memcmp`](./Libft/ft_memcmp.c)
+    - Compares byte string s1 against byte string s2.  Both strings are assumed to be n bytes long.
 - [`calloc`](./Libft/ft_calloc.c)
+    - Contiguously allocates enough space for count objects that are size bytes of memory each and returns a pointer to
+     the allocated memory.
+     - The allocated memory is filled with bytes of value zero.
     
 ### **string**
 
@@ -31,9 +44,11 @@
 - [`toupper`](./Libft/ft_toupper.c)
 - [`tolower`](./Libft/ft_tolower.c)
 
+
+> Description Source [Linux man page]
 <br>
 
-## Non Library Function
+## Non-Library Function
 
 ### **string**
 - [`ft_substr`](./Libft/ft_substr.c)
@@ -52,6 +67,8 @@
 - [`ft_strmapi`](./Libft/ft_strmapi.c)
     - Applies the function ’f’ to each character of the string ’s’ to create a new string (with malloc(3)) resulting from successive applications of ’f’.
 
+<br>
+
 ### **put\*_fd**
 - [`ft_putchar_fd`](./Libft/ft_putchar_fd.c)
     - Outputs the character ’c’ to the given file descriptor.
@@ -61,6 +78,8 @@
     - Outputs the string ’s’ to the given file descriptor, followed by a newline.
 - [`ft_putnbr_fd`](./Libft/ft_putnbr_fd.c)
     - Outputs the integer ’n’ to the given file descriptor.
+
+<br>
 
 ### **linked list**
 
@@ -97,7 +116,7 @@ typedef struct s_list
     - The ’del’ function is used to delete the content of an element if needed.
 
 
-------------------
+<br>
 
 ## Test Result
 - [`Libftest`](https://github.com/jtoty/Libftest)
