@@ -26,14 +26,35 @@
 ### **string**
 
 - [`strlen`](./Libft/ft_strlen.c)
+    - Computes the length of the string s.
 - [`strlcpy`](./Libft/ft_strlcpy.c)
+    - Take the full size of the destination buffer and guarantee NUL-termination if there is room.
+    - Note that room for the NUL should be included in dstsize.
+    - Copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.
 - [`strlcat`](./Libft/ft_strlcat.c)
+    - Appends string src to the end of dst.
+    - It will append at most dstsize - strlen(dst) - 1 characters.
+    - It will then NUL-terminate, unless dstsize is 0 or the original dst string was longer than dstsize (in practice this should not happen as it means that either
+     dstsize is incorrect or that dst is not a proper string).
 - [`strchr`](./Libft/ft_strchr.c)
+    - Locates the first occurrence of c (converted to a char) in the string pointed to by s.
+    - The terminating null character is considered to be part of the string;
+    - therefore if c is '\0', the functions locate the terminating '\0'.
 - [`strrchr`](./Libft/ft_strrchr.c)
+    - The strrchr() function is identical to strchr(), except it locates the last occurrence of c.
 - [`strnstr`](./Libft/ft_strnstr.c)
+    - Locates the first occurrence of the null-terminated string needle in the string haystack, where not more than len
+     characters are searched.
+     - Characters that appear after a '\0' character are not searched.
+     - Since the strnstr() function is a FreeBSD specific API, it should only be used when portability is not a concern.
 - [`strncmp`](./Libft/ft_strncmp.c)
+    - Compares not more than n characters.
+    - Because strncmp() is designed for comparing strings rather than binary data, characters that appear after a '\0' character are not compared.
 - [`atoi`](./Libft/ft_atoi.c)
+    - Converts the initial portion of the string pointed to by str to int representation.
 - [`strdup`](./Libft/ft_strdup.c)
+    - Allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it.
+    - The pointer may subsequently be used as an argument to the function free(3).
     
 ### **is\*, to\***
 - [`isalpha`](./Libft/ft_isalpha.c)
