@@ -94,10 +94,11 @@ typedef struct s_list
 ------------------
 
 ## Test Result
-
 - [`Libftest`](https://github.com/jtoty/Libftest)
-    - ![](https://i.imgur.com/9jQ0tDz.png)
+<img src="https://i.imgur.com/9jQ0tDz.png" width="300"/>
+
 - [`libft-unit-test`](https://github.com/alelievr/libft-unit-test)
-    - [](https://i.imgur.com/ozVrvUc.png)
+<img src="https://i.imgur.com/ozVrvUc.png" width="300"/>
+
 - [`libft-war-machine`](https://github.com/ska42/libft-war-machine)
-    - ![](https://i.imgur.com/sRIh6dR.png)
+<img src="https://i.imgur.com/sRIh6dR.png" width="300"/>
