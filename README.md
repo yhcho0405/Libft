@@ -1,10 +1,26 @@
 ## Library Function
 
 ### ***memory***
-[`memset`](./Libft/ft_memset.c) [`bzero`](./Libft/ft_bzero.c) [`memcpy`](./Libft/ft_memcpy.c) [`memccpy`](./Libft/ft_memccpy.c) [`memmove`](./Libft/ft_memmove.c) [`memchr`](./Libft/ft_memchr.c) [`memcmp`](./Libft/ft_memcmp.c) [`calloc`](./Libft/ft_calloc.c)
+- [`memset`](./Libft/ft_memset.c)
+- [`bzero`](./Libft/ft_bzero.c)
+- [`memcpy`](./Libft/ft_memcpy.c)
+- [`memccpy`](./Libft/ft_memccpy.c)
+- [`memmove`](./Libft/ft_memmove.c)
+- [`memchr`](./Libft/ft_memchr.c)
+- [`memcmp`](./Libft/ft_memcmp.c)
+- [`calloc`](./Libft/ft_calloc.c)
     
 ### ***string***
-[`strlen`](./Libft/ft_strlen.c) [`strlcpy`](./Libft/ft_strlcpy.c) [`strlcat`](./Libft/ft_strlcat.c) [`strchr`](./Libft/ft_strchr.c) [`strrchr`](./Libft/ft_strrchr.c) [`strnstr`](./Libft/ft_strnstr.c) [`strncmp`](./Libft/ft_strncmp.c) [`atoi`](./Libft/ft_atoi.c) [`strdup`](./Libft/ft_strdup.c)
+
+- [`strlen`](./Libft/ft_strlen.c)
+- [`strlcpy`](./Libft/ft_strlcpy.c)
+- [`strlcat`](./Libft/ft_strlcat.c)
+- [`strchr`](./Libft/ft_strchr.c)
+- [`strrchr`](./Libft/ft_strrchr.c)
+- [`strnstr`](./Libft/ft_strnstr.c)
+- [`strncmp`](./Libft/ft_strncmp.c)
+- [`atoi`](./Libft/ft_atoi.c)
+- [`strdup`](./Libft/ft_strdup.c)
     
 ### ***is, to***
 [`isalpha`](./Libft/ft_isalpha.c) [`isdigit`](./Libft/ft_isdigit.c) [`isalnum`](./Libft/ft_isalnum.c) [`isascii`](./Libft/ft_isascii.c) [`isprint`](./Libft/ft_isprint.c) [`toupper`](./Libft/ft_toupper.c) [`tolower`](./Libft/ft_tolower.c)
@@ -75,3 +91,13 @@ typedef struct s_list
     - The ’del’ function is used to delete the content of an element if needed.
 
 
+------------------
+
+## Test Result
+
+- [`Libftest`](https://github.com/jtoty/Libftest)
+    - ![](https://i.imgur.com/9jQ0tDz.png)
+- [`libft-unit-test`](https://github.com/alelievr/libft-unit-test)
+    - [](https://i.imgur.com/ozVrvUc.png)
+- [`libft-war-machine`](https://github.com/ska42/libft-war-machine)
+    - ![](https://i.imgur.com/sRIh6dR.png)
