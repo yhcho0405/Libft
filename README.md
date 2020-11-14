@@ -1,6 +1,6 @@
 ## Library Function
 
-### ***memory***
+### **memory**
 - [`memset`](./Libft/ft_memset.c)
 - [`bzero`](./Libft/ft_bzero.c)
 - [`memcpy`](./Libft/ft_memcpy.c)
@@ -10,7 +10,7 @@
 - [`memcmp`](./Libft/ft_memcmp.c)
 - [`calloc`](./Libft/ft_calloc.c)
     
-### ***string***
+### **string**
 
 - [`strlen`](./Libft/ft_strlen.c)
 - [`strlcpy`](./Libft/ft_strlcpy.c)
@@ -22,7 +22,7 @@
 - [`atoi`](./Libft/ft_atoi.c)
 - [`strdup`](./Libft/ft_strdup.c)
     
-### ***is, to***
+### **is\*, to\***
 - [`isalpha`](./Libft/ft_isalpha.c)
 - [`isdigit`](./Libft/ft_isdigit.c)
 - [`isalnum`](./Libft/ft_isalnum.c)
@@ -35,7 +35,7 @@
 
 ## Non Library Function
 
-### ***string***
+### **string**
 - [`ft_substr`](./Libft/ft_substr.c)
     - Allocates (with malloc(3)) and returns a substring from the string ’s’.
     - The substring begins at index ’start’ and is of maximum size ’len’.
@@ -52,7 +52,7 @@
 - [`ft_strmapi`](./Libft/ft_strmapi.c)
     - Applies the function ’f’ to each character of the string ’s’ to create a new string (with malloc(3)) resulting from successive applications of ’f’.
 
-### ***put_fd***
+### **put\*_fd**
 - [`ft_putchar_fd`](./Libft/ft_putchar_fd.c)
     - Outputs the character ’c’ to the given file descriptor.
 - [`ft_putstr_fd`](./Libft/ft_putstr_fd.c)
@@ -62,7 +62,7 @@
 - [`ft_putnbr_fd`](./Libft/ft_putnbr_fd.c)
     - Outputs the integer ’n’ to the given file descriptor.
 
-### ***linked list**
+### **linked list**
 
 ```c
 typedef struct s_list
