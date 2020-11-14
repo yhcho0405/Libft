@@ -58,15 +58,28 @@
     
 ### **is\*, to\***
 - [`isalpha`](./Libft/ft_isalpha.c)
+    - Tests for any character for which isupper(3) or islower(3) is true.
+    - The value of the argument must be representable as an unsigned char or the value of EOF.
 - [`isdigit`](./Libft/ft_isdigit.c)
+    - Tests for a decimal digit character.
 - [`isalnum`](./Libft/ft_isalnum.c)
+    - Tests for any character for which isalpha(3) or isdigit(3) is true.
+    - The value of the argument must be representable as an unsigned char or the value of EOF.
 - [`isascii`](./Libft/ft_isascii.c)
+    - Tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
 - [`isprint`](./Libft/ft_isprint.c)
+    - Tests for any printing character, including space (' ').
+    - The value of the argument must be representable as an unsigned char or the value of EOF.
 - [`toupper`](./Libft/ft_toupper.c)
+    - Converts a lower-case letter to the corresponding upper-case letter.
+    - The argument must be representable as an unsigned char or the value of EOF.
 - [`tolower`](./Libft/ft_tolower.c)
+    - Converts an upper-case letter to the corresponding lower-case letter.
+    - The argument must be representable as an unsigned char or the value of EOF.
 
 
 > Description Source [Linux man page]
+
 <br>
 
 ## Non-Library Function
