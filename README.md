@@ -23,7 +23,13 @@
 - [`strdup`](./Libft/ft_strdup.c)
     
 ### ***is, to***
-[`isalpha`](./Libft/ft_isalpha.c) [`isdigit`](./Libft/ft_isdigit.c) [`isalnum`](./Libft/ft_isalnum.c) [`isascii`](./Libft/ft_isascii.c) [`isprint`](./Libft/ft_isprint.c) [`toupper`](./Libft/ft_toupper.c) [`tolower`](./Libft/ft_tolower.c)
+- [`isalpha`](./Libft/ft_isalpha.c)
+- [`isdigit`](./Libft/ft_isdigit.c)
+- [`isalnum`](./Libft/ft_isalnum.c)
+- [`isascii`](./Libft/ft_isascii.c)
+- [`isprint`](./Libft/ft_isprint.c)
+- [`toupper`](./Libft/ft_toupper.c)
+- [`tolower`](./Libft/ft_tolower.c)
 
 <br>
 
@@ -95,10 +101,10 @@ typedef struct s_list
 
 ## Test Result
 - [`Libftest`](https://github.com/jtoty/Libftest)
-<img src="https://i.imgur.com/9jQ0tDz.png" width="300"/>
+<img src="https://i.imgur.com/9jQ0tDz.png" width="400"/>
 
 - [`libft-unit-test`](https://github.com/alelievr/libft-unit-test)
-<img src="https://i.imgur.com/ozVrvUc.png" width="300"/>
+<img src="https://i.imgur.com/ozVrvUc.png" width="400"/>
 
 - [`libft-war-machine`](https://github.com/ska42/libft-war-machine)
-<img src="https://i.imgur.com/sRIh6dR.png" width="300"/>
+<img src="https://i.imgur.com/sRIh6dR.png" width="400"/>
