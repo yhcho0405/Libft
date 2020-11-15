@@ -1,3 +1,20 @@
+## How to Use
+```
+~/Libft$>make
+```
+
+```
+~/Libft$>make re
+```
+
+```
+~/Libft$>make clean
+```
+
+```
+~/Libft$>make fclean
+```
+
 ## Library Function
 
 ### **memory**
