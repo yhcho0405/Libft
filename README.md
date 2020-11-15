@@ -1,3 +1,6 @@
+## Progress Log
+- 2020/10/5 ~ 2020/11/13
+
 ## How to Use
 ```
 git clone https://github.com/yhcho0405/Libft.git
