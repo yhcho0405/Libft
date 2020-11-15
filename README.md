@@ -1,18 +1,8 @@
 ## How to Use
 ```
+$>git clone https://github.com/yhcho0405/Libft.git
+$>cd Libft
 ~/Libft$>make
-```
-
-```
-~/Libft$>make re
-```
-
-```
-~/Libft$>make clean
-```
-
-```
-~/Libft$>make fclean
 ```
 
 ## Library Function
