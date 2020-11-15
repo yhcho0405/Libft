@@ -126,7 +126,7 @@ make
 <br>
 
 ### **linked list**
-
+- **node struct**
 ```c
 typedef struct s_list
 {
