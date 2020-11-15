@@ -1,5 +1,5 @@
 ## How to Use
-```
+```sh
 $>git clone https://github.com/yhcho0405/Libft.git
 $>cd Libft
 ~/Libft$>make
