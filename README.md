@@ -4,7 +4,7 @@
 ## How to Use
 ```
 git clone https://github.com/yhcho0405/Libft.git
-cd Libft
+cd Libft/Libft
 make
 ```
 
