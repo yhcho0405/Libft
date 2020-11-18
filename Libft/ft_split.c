@@ -33,6 +33,17 @@ size_t	count_words(char const *s, char c)
 	return (ret);
 }
 
+char**	allocate_fail(char **tmp, size_t idx)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < idx)
+		free(tmp[i++]);
+	free(tmp);
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;
@@ -55,7 +66,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		if (!(ret[idx] = (char *)malloc(s - tmp + 1)))
-			return (0);
+			return (allocate_fail(ret, idx));
 		ft_strlcpy(ret[idx++], tmp, s - tmp + 1);
 	}
 	ret[idx] = 0;
