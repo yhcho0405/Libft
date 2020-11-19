@@ -1,16 +1,9 @@
 NAME = libft.a
-
 HEADER = libft.h
-
 CFLAGS = -Wall -Wextra -Werror
-
 CC = gcc
-
 AR = ar rc
-
 RM = rm -f
-
-
 
 BSRCS = ft_lstnew.c			\
 		ft_lstadd_front.c	\
@@ -20,8 +13,8 @@ BSRCS = ft_lstnew.c			\
 		ft_lstdelone.c		\
 		ft_lstclear.c		\
 		ft_lstiter.c		\
-		ft_lstmap.c		\
-		
+		ft_lstmap.c			\
+
 SRCS = ft_memset.c		\
 	   ft_bzero.c		\
 	   ft_memcpy.c		\
@@ -58,43 +51,23 @@ SRCS = ft_memset.c		\
 	   ft_putnbr_fd.c	\
 
 OBJS = $(SRCS:.c=.o)
-
 BOBJS = $(BSRCS:.c=.o)
-
-
 
 all: $(NAME)
 
-
-
 $(NAME): $(OBJS)
-
 	$(AR) $@ $^
 
-
-
 bonus: $(BOBJS) $(OBJS)
-
 	$(AR) $(NAME) $^
 
-
-
 %.o: %.c $(HEADER)
-
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
-
 clean:
-
 	$(RM) $(OBJS) $(BOBJS)
 
-
-
 fclean: clean
-
 	$(RM) $(NAME)
-
-
 
 re: fclean all

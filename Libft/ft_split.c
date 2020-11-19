@@ -6,7 +6,7 @@
 /*   By: youncho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:31:41 by youncho           #+#    #+#             */
-/*   Updated: 2020/11/13 14:43:31 by youncho          ###   ########.fr       */
+/*   Updated: 2020/11/20 05:13:46 by youncho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	count_words(char const *s, char c)
 	return (ret);
 }
 
-char**	allocate_fail(char **tmp, size_t idx)
+char	**allocate_fail(char **tmp, size_t idx)
 {
 	size_t	i;
 
