@@ -10,21 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*ret;
-	size_t	len;
+	size_t	i;
 
 	if (!s || !f)
 		return (0);
-	len = ft_strlen(s);
-	if (!(ret = malloc(len + 1)))
+	if (!(ret = malloc(ft_strlen(s) + 1)))
 		return (0);
-	ret[len] = 0;
-	while (--len)
-		ret[len] = f(len, s[len]);
-	ret[0] = f(len, s[0]);
+	i = -1;
+	while (s[++i])
+		ret[i] = f(i, s[i]);
+	ret[i] = 0;
 	return (ret);
 }
