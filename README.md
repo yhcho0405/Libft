@@ -1,5 +1,5 @@
-### Norme2 Base
-> [Norme3 Branch](https://github.com/yhcho0405/Libft/tree/norm3)
+### Norm2 Base
+> [Norm3 Branch](https://github.com/yhcho0405/Libft/tree/norm3)
 
 ## How to Use
 ```
