@@ -1,5 +1,5 @@
-## Progress Log
-- 2020/10/5 ~ 2020/11/13
+### Norme2 Base
+> [Norme3 Branch](https://github.com/yhcho0405/Libft/tree/norm3)
 
 ## How to Use
 ```
